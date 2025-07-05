@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Maruti Compact Car Launch">
+<title>Maruti Car Launch</title>
+<style>
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f5f7fa, #c3cfe2);
+    color: #333;
+    scroll-behavior: smooth;
+  }
+
+  header {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.8em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: fadeInDown 1s ease;
+  }
+
+  @keyframes fadeInDown {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  nav {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 15px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+    transition: color 0.3s ease, background 0.3s ease;
+  }
+
+  nav a:hover {
+    background: #007bff;
+    color: #fff;
+  }
+
+  main {
+    padding: 20px;
+  }
+
+  .intro {
+    text-align: center;
+    margin-bottom: 30px;
+    animation: fadeIn 1.5s ease;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .intro h2 {
+    color: #007bff;
+    font-size: 2em;
+  }
+
+  .models {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .model-card {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s ease;
+  }
+
+  .model-card:hover {
+    transform: scale(1.05);
+  }
+
+  .model-card img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  .model-card h3 {
+    color: #007bff;
+    margin: 10px 0;
+  }
+
+  .model-card p {
+    font-size: 0.95em;
+    color: #555;
+  }
+
+  .model-card a {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 15px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+
+  .model-card a:hover {
+    background: #0056b3;
+  }
+
+  .video, .map {
+    margin: 40px auto;
+    text-align: center;
+  }
+
+  .video iframe, .map iframe {
+    width: 90%;
+    max-width: 800px;
+    height: 450px;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  }
+
+  footer {
+    text-align: center;
+    padding: 15px;
+    background: #f1f1f1;
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 30px;
+  }
+</style>
+</head>
+
+<body>
+
+<header>
+  Maruti Alto Car Launch
+</header>
+
+<nav>
+  <a href="index.html">Home</a>
+  <a href="register.html">Register</a>
+  <a href="login.html">Login</a>
+</nav>
+
+<main>
+  <section class="intro">
+    <h2>Welcome to the Maruti Compact Car Launch</h2>
+    <p>Explore our exciting new models, crafted with cutting-edge design, efficiency, and comfort. Book your test drive today!</p>
+  </section>
+
+  <section class="models">
+    <div class="model-card">
+      <img src="C:\Users\vaish\Documents\wt\k10.webp" alt="Maruti K10">
+      <h3>Maruti K10</h3>
+      <p>The sporty and powerful K10, with a sleek look and advanced features for your daily adventures.</p>
+      <a href="register.html">Book Now</a>
+    </div>
+
+    <div class="model-card">
+      <img src="C:\Users\vaish\Documents\wt\800.webp" alt="Maruti 800">
+      <h3>Maruti 800</h3>
+      <p>The classic, dependable Maruti 800 returns with a modern twist and improved fuel efficiency.</p>
+      <a href="register.html">Book Now</a>
+    </div>
+
+    <div class="model-card">
+      <img src="C:\Users\vaish\Documents\wt\basic.jpg" alt="Basic Model">
+      <h3>Basic Model</h3>
+      <p>Affordable and practical for everyone, the Basic Model delivers quality and performance at a great value.</p>
+      <a href="register.html">Book Now</a>
+    </div>
+  </section>
+
+  <section class="video">
+    <h2>🎥 Watch Our Launch Event</h2>
+    <iframe src="https://www.youtube.com/embed/2Xc9gXyf2G4" allowfullscreen></iframe>
+  </section>
+
+  <section class="map">
+    <h2>📍 Visit Our Showroom</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.470933440734!2d77.59456281532746!3d13.082680290772392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1671c8b0e02d%3A0x1d4bdf2ccf996a50!2sMaruti%20Suzuki%20Arena!5e0!3m2!1sen!2sin!4v1628072912937!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
+  </section>
+
+</main>
+
+<footer>
+  &copy; 2025 Maruti Motors | All Rights Reserved
+</footer>
+
+</body>
+</html>
+
