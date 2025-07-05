@@ -1,0 +1,40 @@
+🌟 HTML5 Tags Used:
+Tag	Description
+<!DOCTYPE html>	Declares the document as an HTML5 document.
+<html>	Root element of an HTML page.
+<head>	Container for metadata and links to CSS.
+<meta charset>	Specifies character encoding (UTF-8).
+<meta name="viewport">	Makes page responsive on different devices.
+<meta name="description">	SEO: describes the page content.
+<title>	Defines the title of the page (seen on browser tab).
+<style>	Embeds CSS styles directly in the document.
+<body>	The content body of the page.
+<header>	Semantic header section of the page.
+<nav>	Semantic navigation section of the page.
+<a>	Anchor link to other pages or sections.
+<main>	Main content of the page, for accessibility/SEO.
+<section>	Defines sections of related content.
+<h2>	Section heading (level 2).
+<p>	Paragraph text.
+<div>	Generic container used for layout/styling.
+<img>	Displays images.
+<h3>	Section heading (level 3).
+<iframe>	Embeds external content (YouTube video, Google Maps).
+<footer>	Semantic footer section of the page.
+
+🌟 CSS3 Tags/Features/Properties Used:
+CSS3 Feature/Property	Description
+background with linear-gradient	CSS3 gradient background.
+scroll-behavior: smooth	Enables smooth scrolling to anchors.
+animation & @keyframes	Defines fadeIn, fadeInDown animations.
+flexbox (display: flex, justify-content, gap, flex-wrap)	CSS3 layout model for flexible, responsive design.
+box-shadow	Adds shadow effects to boxes/cards.
+border-radius	Rounds corners of boxes and images.
+transition	Smooth hover effects (color, transform).
+transform: scale()	Scales elements on hover for animation.
+max-width & min-height	Responsive image/video/map sizing.
+text-align, font-weight, letter-spacing	Text styling.
+hover pseudo-class	Styles elements on mouse hover.
+color & background-color	Colors for text and backgrounds.
+padding, margin	Spacing around and inside elements.
+font-size	Typography control.
