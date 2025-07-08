@@ -1,160 +1,258 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Register | Maruti Launch</title>
-<style>
-  body {
-    background: radial-gradient(circle, #ffffff, #dfe9f3);
-    font-family: Arial, sans-serif;
-  }
-  form {
-    max-width: 400px;
-    margin: auto;
-    background: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
-  }
-  h2 {
-    text-align: center;
-    color: #007bff;
-  }
-  label {
-    display: block;
-    margin-top: 10px;
-  }
-  input, select {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-  }
-  button {
-    margin-top: 15px;
-    width: 100%;
-    padding: 10px;
-    background: #007bff;
-    color: white;
-    border: none;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-  button:hover {
-    background: #0056b3;
-  }
-  .error {
-    color: red;
-    font-size: 0.9em;
-  }
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Register | Maruti Launch</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #e3f2fd, #90caf9);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #0d47a1;
+      color: white;
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 1.7rem;
+    }
+
+    nav a {
+      color: #ffffffcc;
+      margin-left: 20px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    nav a:hover {
+      color: #fff;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    form {
+      width: 100%;
+      max-width: 400px;
+      background: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.8s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      text-align: center;
+      color: #0d47a1;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 600;
+      color: #333;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      margin-top: 8px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      transition: border 0.3s;
+    }
+
+    input:focus {
+      border-color: #2196f3;
+      outline: none;
+    }
+
+    button {
+      margin-top: 25px;
+      width: 100%;
+      padding: 14px;
+      background: #1976d2;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background: #1565c0;
+    }
+
+    .error {
+      color: #d32f2f;
+      font-size: 0.9em;
+      margin-top: 4px;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 0.95em;
+    }
+
+    .login-link a {
+      color: #0d47a1;
+      text-decoration: none;
+      font-weight: 500;
+    }
+
+    .login-link a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      background-color: #0d47a1;
+      color: white;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 0.9em;
+    }
+
+    @media (max-width: 480px) {
+      form {
+        padding: 20px;
+      }
+
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+    }
+  </style>
 </head>
 <body>
 
-<form id="registerForm" novalidate>
-  <h2>Register</h2>
-  
-  <label for="name">Full Name</label>
-  <input type="text" id="name" name="name" required>
-  <div class="error" id="nameError"></div>
+  <header>
+    <h1>Maruti Launch</h1>
+    <nav>
+      <a href="index.html">Login</a>
+      <a href="#">Support</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
 
-  <label for="email">Email</label>
-  <input type="email" id="email" name="email" required>
-  <div class="error" id="emailError"></div>
+  <main>
+    <form id="registerForm" novalidate>
+      <h2>Register</h2>
 
-  <label for="phone">Phone</label>
-  <input type="tel" id="phone" name="phone" required>
-  <div class="error" id="phoneError"></div>
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" required />
+      <div class="error" id="nameError"></div>
 
-  <label for="dob">Date of Birth</label>
-  <input type="date" id="dob" name="dob" required>
-  <div class="error" id="dobError"></div>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+      <div class="error" id="emailError"></div>
 
-  <label for="gender">Gender</label>
-  <select id="gender" name="gender" required>
-    <option value="">Select</option>
-    <option value="male">Male</option>
-    <option value="female">Female</option>
-    <option value="other">Other</option>
-  </select>
-  <div class="error" id="genderError"></div>
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+      <div class="error" id="passwordError"></div>
 
-  <label>
-    <input type="checkbox" id="terms" name="terms" required>
-    I agree to the <a href="#">terms & conditions</a>.
-  </label>
-  <div class="error" id="termsError"></div>
+      <label for="confirmPassword">Confirm Password</label>
+      <input type="password" id="confirmPassword" name="confirmPassword" required />
+      <div class="error" id="confirmPasswordError"></div>
 
-  <button type="submit">Register</button>
-</form>
+      <button type="submit">Register</button>
 
-<script>
-document.getElementById('registerForm').addEventListener('submit', function(e) {
-  e.preventDefault();
+      <div class="login-link">
+        Already have an account? <a href="login.html">Login here</a>
+      </div>
+    </form>
+  </main>
 
-  let valid = true;
+  <footer>
+    &copy; 2025 Maruti Launch. All rights reserved.
+  </footer>
 
-  document.querySelectorAll('.error').forEach(el => el.textContent = '');
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', function(e) {
+      e.preventDefault();
 
-  const name = document.getElementById('name').value.trim();
-  if (!/^[A-Za-z ]{2,}$/.test(name)) {
-    document.getElementById('nameError').textContent = "Please enter a valid name (letters only).";
-    valid = false;
-  }
+      let valid = true;
+      document.querySelectorAll('.error').forEach(el => el.textContent = '');
 
-  const email = document.getElementById('email').value.trim();
-  if (!/^\S+@\S+\.\S+$/.test(email)) {
-    document.getElementById('emailError').textContent = "Please enter a valid email.";
-    valid = false;
-  }
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const password = document.getElementById('password').value;
+      const confirmPassword = document.getElementById('confirmPassword').value;
 
-  const phone = document.getElementById('phone').value.trim();
-  if (!/^\d{10}$/.test(phone)) {
-    document.getElementById('phoneError').textContent = "Phone must be 10 digits.";
-    valid = false;
-  }
+      if (name.length < 3) {
+        document.getElementById('nameError').textContent = "Please enter your full name.";
+        valid = false;
+      }
 
-  const dob = document.getElementById('dob').value;
-  if (!dob) {
-    document.getElementById('dobError').textContent = "Please select your date of birth.";
-    valid = false;
-  }
+      if (!/^\S+@\S+\.\S+$/.test(email)) {
+        document.getElementById('emailError').textContent = "Please enter a valid email.";
+        valid = false;
+      }
 
-  const gender = document.getElementById('gender').value;
-  if (!gender) {
-    document.getElementById('genderError').textContent = "Please select a gender.";
-    valid = false;
-  }
+      if (password.length < 6) {
+        document.getElementById('passwordError').textContent = "Password must be at least 6 characters.";
+        valid = false;
+      }
 
-  const terms = document.getElementById('terms').checked;
-  if (!terms) {
-    document.getElementById('termsError').textContent = "You must agree to the terms.";
-    valid = false;
-  }
+      if (confirmPassword !== password) {
+        document.getElementById('confirmPasswordError').textContent = "Passwords do not match.";
+        valid = false;
+      }
 
-  if (valid) {
-    const password = prompt("Set a password (min 6 chars):");
-    if (!password || password.length < 6) {
-      alert("Password must be at least 6 characters. Registration aborted.");
-      return;
-    }
+      if (valid) {
+        const existingUser = localStorage.getItem('user_' + email);
+        if (existingUser) {
+          alert("An account with this email already exists.");
+          return;
+        }
 
-    // Save user
-    const user = {
-      name,
-      email,
-      phone,
-      dob,
-      gender,
-      password
-    };
-    localStorage.setItem('user_' + email, JSON.stringify(user));
+        const userData = {
+          name: name,
+          email: email,
+          password: password
+        };
 
-    alert("Registration successful! You can now login.");
-    window.location.href = "login.html";
-  }
-});
-</script>
+        localStorage.setItem('user_' + email, JSON.stringify(userData));
+        alert("Registration successful! You can now log in.");
+        window.location.href = "login.html";
+      }
+    });
+  </script>
 
 </body>
 </html>
+
